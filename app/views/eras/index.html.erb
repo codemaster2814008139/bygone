@@ -1,0 +1,130 @@
+<div class="container">
+  <h1>Important Eras of Human History</h1>
+</div>
+
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="http://cmsmcgregor.weebly.com/uploads/5/9/0/7/59073555/4349262_orig.jpg" alt="1945-1991">
+      <div class="caption">
+        <h3>Cold War</h3>
+        <p>1945-1991</p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="https://archive.is/qPtXJ/cec0f8b4b564e9e42f350ce534dada4c3e6525ab.jpg" alt="1945-1991">
+      <div class="caption">
+        <h3>WW2</h3>
+        <p>1939-1945</p>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="http://data.whicdn.com/images/13470710/tumblr_lq1i87dvEI1qf0ksao1_500_large.jpg" alt="1945-1991">
+      <div class="caption">
+        <h3>Interwar period</h3>
+        <p>1919-1939</p>
+      </div>
+      <p>Includes Spanish Civil War, Japanese invasion of Manchuria, Rise of Fasicm, Great Purge</p>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="https://worldwaripropaganda.files.wordpress.com/2011/01/world-war-1-propaganda1.jpg">
+      <div class="caption">
+        <h3>WW1</h3>
+        <p>1914-1918</p>
+      </div>
+      <p>Includes Western Front, fall of Empires</p>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="https://upload.wikimedia.org/wikipedia/commons/1/17/Wernerprokla.jpg" alt"The coronation of Wilhelm I">
+      <div class="caption">
+        <h3>Before the Great War</h3>
+        <p>1871-1914</p>
+      </div>
+      <p>Includes: Balkan Wars, Chinese Revolution, Russian Revolution 1905, Roald Amundsen's Dicsovery of South Pole, Fridtjof Nansen's crossing of Greenland</p>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+      <img class="photo"src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg/250px-Eug%C3%A8ne_Delacroix_-_La_libert%C3%A9_guidant_le_peuple.jpg" alt"Liberty leading the People">
+      <div class="caption">
+        <h3>Rise of Nationalism and Liberalism</h3>
+        <p>1815-1871</p>
+      </div>
+         <p>Includes: Congress of Vienna, Revolution of 1830, Revolution of 1848, Crimean War, Unification of Germany and Italy</p>
+    </div>
+  </div>
+</div>
+</a>
+<a href="#">
+<div class="column">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail cold">
+     <img class="photo"src="https://upload.wikimedia.org/wikipedia/commons/0/08/Jacques-Louis_David%2C_The_Coronation_of_Napoleon_edit.jpg" alt"Coronation of Napoleon Bonaparte">
+      <div class="caption">
+        <h3>Napoleonic Era</h3>
+        <p>1799-1815</p>
+      </div>
+        <p>Includes: Coup of Brumaire, The Coalitions, Peninsular War, Continental System, Invasion of Russia, Hundred Days</p>
+    </div>
+  </div>
+</div>
+</a>
+<!-- Old text under Here -->
+<p id="notice"><%= notice %></p>
+
+<h1>Eras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eras.each do |era| %>
+      <tr>
+        <td><%= era.title %></td>
+        <td><%= era.time %></td>
+        <td><%= link_to 'Show', era %></td>
+        <td><%= link_to 'Edit', edit_era_path(era) %></td>
+        <td><%= link_to 'Destroy', era, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Era', new_era_path %>

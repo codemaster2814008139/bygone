@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @era.title %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @era.time %>
+</p>
+
+<%= link_to 'Edit', edit_era_path(@era) %> |
+<%= link_to 'Back', eras_path %>
